@@ -1,11 +1,11 @@
 Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
-Version: 4.8.1
+Version: 4.8.2
 Release: 1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://edu.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.bz2
+Source:		ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel >= 2:%{version}
 BuildRequires:	libreadline-devel
 
