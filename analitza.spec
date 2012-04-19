@@ -7,7 +7,7 @@ License:	LGPLv2
 URL:		http://edu.kde.org
 Source:		ftp://ftp.kde.org/pub/kde/stable/%version/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel >= 2:%{version}
-BuildRequires:	libreadline-devel
+BuildRequires:	readline-devel
 
 %description
 The analitza library will let you add mathematical features to your program.
