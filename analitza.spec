@@ -1,7 +1,7 @@
 Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
-Version: 4.9.3
-Release: 1
+Version:	4.9.4
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://edu.kde.org
@@ -86,4 +86,66 @@ Files needed to build applications based on %{name}.
 
 %install
 %makeinstall_std -C build
+
+%changelog
+* Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
+- New version 4.9.4
+
+* Wed Nov 07 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.3-1
+- New version 4.9.3
+
+* Thu Oct 04 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.2-1
+- New version 4.9.2
+
+* Sat Sep 08 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.1-1
+- New version 4.9.1
+
+* Mon Aug 13 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.0-1
+- New version 4.9.0
+
+* Thu Jul 19 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.8.97-1
+- New version 4.8.97
+
+* Mon Jul 02 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.8.95-1
+- New version 4.8.95
+
+* Sat Jun 09 2012 Crispin Boylan <crisb@mandriva.org> 4.8.4-1
++ Revision: 803730
+- New release
+
+* Fri May 04 2012 Crispin Boylan <crisb@mandriva.org> 4.8.3-1
++ Revision: 796277
+- New release
+
+* Thu Apr 19 2012 Crispin Boylan <crisb@mandriva.org> 4.8.2-1
++ Revision: 792020
+- New release
+
+  + Nicolas Lécureuil <nlecureuil@mandriva.com>
+    - New upstream tarball
+
+* Sun Feb 26 2012 Andrey Bondrov <abondrov@mandriva.org> 4.8.0-2
++ Revision: 780796
+- Add BuildRequires libreadline-devel and calgebra subpackage
+
+* Thu Jan 19 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.8.0-1
++ Revision: 762439
+- New upstream tarball
+
+* Fri Jan 06 2012 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.97-1
++ Revision: 758030
+- New upstream tarball
+
+* Thu Dec 22 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.95-1
++ Revision: 744506
+- New upstream tarball
+
+* Fri Dec 09 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.90-1
++ Revision: 739342
+- New upstream tarball
+
+* Wed Nov 23 2011 Nicolas Lécureuil <nlecureuil@mandriva.com> 4.7.80-1
++ Revision: 732995
+- Import analitza
+- create analitza repo
 
