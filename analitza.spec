@@ -104,8 +104,10 @@ Files needed to build applications based on %{name}.
 %files devel
 %{_kde_includedir}/analitza
 %{_kde_includedir}/analitzagui
+%{_kde_includedir}/analitzaplot
 %{_kde_libdir}/libanalitza.so
 %{_kde_libdir}/libanalitzagui.so
+%{_kde_libdir}/libanalitzaplot.so
 %{_kde_libdir}/cmake/analitza
 
 #----------------------------------------------------------------------
@@ -126,6 +128,7 @@ Files needed to build applications based on %{name}.
 - New subpackage libanalitzaplot
 - New subpackage plots
 - Fix some summaries and descriptions
+- Update files
 
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4
