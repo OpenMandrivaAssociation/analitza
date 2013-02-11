@@ -1,6 +1,6 @@
 Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
-Version:	4.9.4
+Version:	4.10.0
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -28,15 +28,29 @@ language.
 
 #---------------------------------------------
 
+%package plots
+Summary:	Plots used by the libanalitzaplot library
+Group:		Graphical desktop/KDE
+BuildArch:	noarch
+
+%description plots
+This package provides plots used by the libanalitzaplot library.
+
+%files plots
+%{_kde_appsdir}/libanalitza/plots/basic_curves.plots
+
+#---------------------------------------------
+
 %define analitza_major 4
 %define libanalitza %mklibname analitza %{analitza_major}
 
 %package -n %{libanalitza}
-Summary:	Runtime library for marble
+Summary:	Runtime library for %{name}
 Group:		System/Libraries
 
 %description -n %{libanalitza}
-Runtime library for marble
+The analitza library will let you add mathematical features to your program.
+This pakage provide the runtime library for %{name}.
 
 %files -n %{libanalitza}
 %{_kde_libdir}/libanalitza.so.%{analitzagui_major}*
@@ -47,14 +61,32 @@ Runtime library for marble
 %define libanalitzagui %mklibname analitzagui %{analitzagui_major}
 
 %package -n %{libanalitzagui}
-Summary:	Runtime library for marble
+Summary:	Runtime library for %{name}
 Group:		System/Libraries
 
 %description -n %{libanalitzagui}
-Runtime library for marble
+The analitza library will let you add mathematical features to your program.
+This pakage provide the runtime library for %{name}.
 
 %files -n %{libanalitzagui}
 %{_kde_libdir}/libanalitzagui.so.%{analitzagui_major}*
+
+#---------------------------------------------
+
+%define analitzaplot_major 4
+%define libanalitzaplot %mklibname analitzaplot %{analitzaplot_major}
+
+%package -n %{libanalitzaplot}
+Summary:	Runtime library for %{name}
+Group:		System/Libraries
+Requires:	analitza-plots
+
+%description -n %{libanalitzaplot}
+The analitza library will let you add mathematical features to your program.
+This pakage provide the runtime library for %{name}.
+
+%files -n %{libanalitzaplot}
+%{_kde_libdir}/libanalitzaplot.so.%{analitzaplot_major}*
 
 #---------------------------------------------
 
@@ -64,6 +96,7 @@ Group:		Development/KDE and Qt
 Requires:	kdelibs4-devel
 Requires:	%{libanalitza} = %{EVRD}
 Requires:	%{libanalitzagui} = %{EVRD}
+Requires:	%{libanalitzaplot} = %{EVRD}
 
 %description devel
 Files needed to build applications based on %{name}.
@@ -88,6 +121,12 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
+- New version 4.10.0
+- New subpackage libanalitzaplot
+- New subpackage plots
+- Fix some summaries and descriptions
+
 * Wed Dec 05 2012 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.9.4-1
 - New version 4.9.4
 
