@@ -1,6 +1,6 @@
 Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
-Version:	4.10.0
+Version:	4.10.1
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -123,6 +123,9 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Sat Mar 09 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.1-1
+- New version 4.10.1
+
 * Thu Feb 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.0-1
 - New version 4.10.0
 - New subpackage libanalitzaplot
