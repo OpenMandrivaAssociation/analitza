@@ -1,13 +1,20 @@
+%ifarch	%{arm}
+%bcond_without opengl
+%endif
+
 Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
 Version:	4.10.2
-Release:	1
+Release:	2
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://edu.kde.org
-Source:		ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	readline-devel
+# add SHOULD_BUILD_OPENGL option, to be able to disable support
+# on arm because plotter3d assumes qreal=double all over the place
+Patch0:		analitza-4.10.2-opengl_optional.patch	
 
 %description
 The analitza library will let you add mathematical features to your program.
@@ -114,9 +121,14 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
+%patch0 -p1 .opengl_arm_float
 
 %build
-%cmake_kde4
+%cmake_kde4 \
+%if %{with opengl}
+	-DSHOULD_BUILD_OPENGL:BOOL=OFF \
+%endif
+
 %make
 
 %install
