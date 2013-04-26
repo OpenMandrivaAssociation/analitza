@@ -1,4 +1,4 @@
-%ifarch	%{arm}
+%ifarch %{arm}
 %bcond_without opengl
 %endif
 
@@ -14,7 +14,7 @@ BuildRequires:	kdelibs4-devel
 BuildRequires:	readline-devel
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
-Patch0:		analitza-4.10.2-opengl_optional.patch	
+Patch0:		analitza-4.10.2-opengl_optional.patch
 
 %description
 The analitza library will let you add mathematical features to your program.
@@ -135,6 +135,9 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Fri Apr 26 2013 Alexander Khryukin <alexander@mezon.ru> 4.10.2-2
+- Make OpenGL support optional and disable it for arm by default
+
 * Wed Apr 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.2-1
 - New version 4.10.2
 
