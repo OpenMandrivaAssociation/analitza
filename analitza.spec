@@ -4,8 +4,8 @@
 
 Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
-Version:	4.10.2
-Release:	2
+Version:	4.10.3
+Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
 URL:		http://edu.kde.org
@@ -135,6 +135,9 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
+- New version 4.10.3
+
 * Fri Apr 26 2013 Alexander Khryukin <alexander@mezon.ru> 4.10.2-2
 - Make OpenGL support optional and disable it for arm by default
 
