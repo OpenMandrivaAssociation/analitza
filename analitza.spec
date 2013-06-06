@@ -1,10 +1,12 @@
 %ifarch %{arm}
+%bcond_with opengl
+%else
 %bcond_without opengl
 %endif
 
-Name:		analitza
 Summary:	Library that will let you add mathematical features to your program
-Version:	4.10.3
+Name:		analitza
+Version:	4.10.4
 Release:	1
 Group:		Graphical desktop/KDE
 License:	LGPLv2
@@ -126,7 +128,9 @@ Files needed to build applications based on %{name}.
 %build
 %cmake_kde4 \
 %if %{with opengl}
-	-DSHOULD_BUILD_OPENGL:BOOL=OFF \
+	-DSHOULD_BUILD_OPENGL:BOOL=ON
+%else
+	-DSHOULD_BUILD_OPENGL:BOOL=OFF
 %endif
 
 %make
@@ -135,6 +139,10 @@ Files needed to build applications based on %{name}.
 %makeinstall_std -C build
 
 %changelog
+* Wed Jun 05 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.4-1
+- New version 4.10.4
+- Fix conditions for OpenGL support
+
 * Tue May 07 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.3-1
 - New version 4.10.3
 
