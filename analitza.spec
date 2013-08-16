@@ -54,7 +54,7 @@ This package provides plots used by the libanalitzaplot library.
 
 #---------------------------------------------
 
-%define analitza_major 4
+%define analitza_major 5
 %define libanalitza %mklibname analitza %{analitza_major}
 
 %package -n %{libanalitza}
@@ -70,7 +70,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define analitzagui_major 4
+%define analitzagui_major 5
 %define libanalitzagui %mklibname analitzagui %{analitzagui_major}
 
 %package -n %{libanalitzagui}
@@ -86,7 +86,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define analitzaplot_major 4
+%define analitzaplot_major 5
 %define libanalitzaplot %mklibname analitzaplot %{analitzaplot_major}
 
 %package -n %{libanalitzaplot}
@@ -145,6 +145,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Wed Aug 14 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.0-1
 - New version 4.11.0
+- New library majors 5
 
 * Wed Jul 03 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.10.5-1
 - New version 4.10.5
