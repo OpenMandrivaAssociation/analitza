@@ -14,10 +14,8 @@ URL:		http://edu.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	kdelibs4-devel
 BuildRequires:	readline-devel
-%if %{with opengl}
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
-%endif
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
 Patch0:		analitza-4.10.2-opengl_optional.patch
