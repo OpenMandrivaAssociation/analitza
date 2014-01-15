@@ -8,17 +8,17 @@ Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
 Version:	4.12.1
 Release:	1
+License:	LGPLv2+
 Group:		Graphical desktop/KDE
-License:	LGPLv2
-URL:		http://edu.kde.org
+Url:		http://edu.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
+# add SHOULD_BUILD_OPENGL option, to be able to disable support
+# on arm because plotter3d assumes qreal=double all over the place
+Patch0:		analitza-4.10.2-opengl_optional.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
-# add SHOULD_BUILD_OPENGL option, to be able to disable support
-# on arm because plotter3d assumes qreal=double all over the place
-Patch0:		analitza-4.10.2-opengl_optional.patch
 
 %description
 The analitza library will let you add mathematical features to your program.
@@ -48,7 +48,7 @@ BuildArch:	noarch
 This package provides plots used by the libanalitzaplot library.
 
 %files plots
-%{_kde_appsdir}/libanalitza/plots/basic_curves.plots
+%{_kde_appsdir}/libanalitza/plots/*.plots
 
 #---------------------------------------------
 
@@ -143,6 +143,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Tue Jan 14 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.12.1-1
 - New version 4.12.1
+- Update files (more plots added)
 
 * Wed Dec 04 2013 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.11.4-1
 - New version 4.11.4
