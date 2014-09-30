@@ -14,7 +14,7 @@ Url:		http://edu.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/stable/%{version}/src/%{name}-%{version}.tar.xz
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
-Patch0:		analitza-4.10.2-opengl_optional.patch
+Patch0:		analitza-4.14.1-opengl_optional.patch
 BuildRequires:	kdelibs4-devel
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
@@ -143,6 +143,7 @@ Files needed to build applications based on %{name}.
 %changelog
 * Mon Sep 29 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.14.1-1
 - New version 4.14.1
+- Re-diff opengl_optional patch
 
 * Tue Jul 15 2014 Andrey Bondrov <andrey.bondrov@rosalab.ru> 4.13.3-1
 - New version 4.13.3
