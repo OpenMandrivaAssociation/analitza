@@ -1,0 +1,17 @@
+--- analitza-14.11.97/CMakeLists.txt.orig	2014-12-15 10:09:42.475121847 +0100
++++ analitza-14.11.97/CMakeLists.txt	2014-12-15 10:11:02.157125685 +0100
+@@ -29,8 +29,13 @@ ecm_setup_version(5.0.0 VARIABLE_PREFIX
+                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/analitza_version.h"
+                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/Analitza5ConfigVersion.cmake")
+ 
++option(SHOULD_BUILD_OPENGL "Build OpenGL support" ON)
++if(SHOULD_BUILD_OPENGL)
+ find_package(OpenGL)
+-set(HAVE_OPENGL ${OPENGL_FOUND})
++	set(HAVE_OPENGL ${OPENGL_FOUND})
++else()
++	set(HAVE_OPENGL false)
++endif()
+ set_package_properties(OpenGL PROPERTIES TYPE OPTIONAL
+                                          PURPOSE "Support for 3D graphs in Analitza"
+                                          URL "http://opengl.org")
