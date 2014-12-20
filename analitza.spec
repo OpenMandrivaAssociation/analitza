@@ -8,7 +8,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	14.11.97
+Version:	14.12.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -16,7 +16,7 @@ Url:		http://edu.kde.org
 Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/%{version}/src/%{name}-%{version}.tar.xz
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
-Patch0:		analitza-14.11.97-opengl_optional.patch
+Patch0:		analitza-14.12.0-opengl_optional.patch
 BuildRequires:	extra-cmake-modules5
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
@@ -47,7 +47,7 @@ This package provides plots used by the libanalitzaplot library.
 
 #---------------------------------------------
 
-%define analitza_major 5
+%define analitza_major 6
 %define libanalitza %mklibname analitza %{analitza_major}
 
 %package -n %{libanalitza}
@@ -65,7 +65,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define analitzagui_major 5
+%define analitzagui_major 6
 %define libanalitzagui %mklibname analitzagui %{analitzagui_major}
 
 %package -n %{libanalitzagui}
@@ -81,7 +81,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define analitzaplot_major 5
+%define analitzaplot_major 6
 %define libanalitzaplot %mklibname analitzaplot %{analitzaplot_major}
 
 %package -n %{libanalitzaplot}
@@ -98,7 +98,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define analitzawidgets_major 5
+%define analitzawidgets_major 6
 %define libanalitzawidgets %mklibname analitzawidgets %{analitzawidgets_major}
 
 %package -n %{libanalitzawidgets}

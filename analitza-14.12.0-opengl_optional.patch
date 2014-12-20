@@ -1,0 +1,29 @@
+--- analitza-14.12.0/CMakeLists.txt.orig	2014-12-20 13:45:14.857464251 +0100
++++ analitza-14.12.0/CMakeLists.txt	2014-12-20 13:47:23.224942317 +0100
+@@ -29,14 +29,19 @@ ecm_setup_version(6.0.0 VARIABLE_PREFIX
+                         VERSION_HEADER "${CMAKE_CURRENT_BINARY_DIR}/analitza_version.h"
+                         PACKAGE_VERSION_FILE "${CMAKE_CURRENT_BINARY_DIR}/Analitza5ConfigVersion.cmake")
+ 
+-find_package(OpenGL)
+-set_package_properties(OpenGL PROPERTIES TYPE OPTIONAL
+-                                         PURPOSE "Support for 3D graphs in Analitza"
+-                                         URL "http://opengl.org")
+-if(OPENGL_FOUND)
+-    find_package(Qt5OpenGL ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE)
++option(SHOULD_BUILD_OPENGL "Build OpenGL support" ON)
++if(SHOULD_BUILD_OPENGL)
++    find_package(OpenGL)
++    set_package_properties(OpenGL PROPERTIES TYPE OPTIONAL
++                                             PURPOSE "Support for 3D graphs in Analitza"
++                                             URL "http://opengl.org")
++    if(OPENGL_FOUND)
++        find_package(Qt5OpenGL ${QT_REQUIRED_VERSION} REQUIRED NO_MODULE)
++    endif()
++    set(HAVE_OPENGL ${Qt5OpenGL_FOUND})
++else()
++    set(HAVE_OPENGL false)
+ endif()
+-set(HAVE_OPENGL ${Qt5OpenGL_FOUND})
+ 
+ find_package(Eigen3) # find and setup Eigen3 if available
+ set(HAVE_EIGEN3 ${EIGEN3_FOUND})
