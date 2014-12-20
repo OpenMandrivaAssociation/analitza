@@ -28,6 +28,7 @@ BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
+BuildRequires:	ninja
 
 %description
 The analitza library will let you add mathematical features to your program.
