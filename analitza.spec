@@ -121,7 +121,8 @@ Group:		System/Libraries
 QML support for Analitza
 
 %files -n %{_lib}analitza-qml
-%{_libdir}/qml/org/kde/analitza
+%{_libdir}/qt5/qml/org/kde/analitza
+
 #---------------------------------------------
 
 %package devel
