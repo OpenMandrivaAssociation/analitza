@@ -8,7 +8,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	15.04.0
+Version:	15.04.1
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -17,7 +17,7 @@ Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
 Patch0:		analitza-14.12.0-opengl_optional.patch
-BuildRequires:	extra-cmake-modules5
+BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
 BuildRequires:	pkgconfig(Qt5Svg)
@@ -28,7 +28,6 @@ BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
-BuildRequires:	ninja
 
 %description
 The analitza library will let you add mathematical features to your program.
@@ -151,7 +150,7 @@ Files needed to build applications based on %{name}.
 %setup -q
 %patch0 -p1 .opengl_arm_float
 
-%cmake -G Ninja \
+%cmake_kde5 \
 %if %{with opengl}
 	-DSHOULD_BUILD_OPENGL:BOOL=ON
 %else
@@ -159,7 +158,7 @@ Files needed to build applications based on %{name}.
 %endif
 
 %build
-ninja -C build
+%ninja -C build
 
 %install
-DESTDIR="%{buildroot}" ninja install -C build
+%ninja_install -C build
