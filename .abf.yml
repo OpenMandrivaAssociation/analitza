@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   analitza-15.08.0.tar.xz: ab54ee2f8c5c0c3214dfe5c6522efc91d6cecd26
+sources:
+  analitza-15.08.1.tar.xz: c803648ec2716e1a7dedd7d6040d65fc597056a9
