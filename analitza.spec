@@ -9,7 +9,7 @@
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
 Version:	15.08.2
-Release:	1
+Release:	3
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
@@ -28,6 +28,7 @@ BuildRequires:	pkgconfig(Qt5Quick)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
+BuildRequires:	pkgconfig(eigen3)
 
 %description
 The analitza library will let you add mathematical features to your program.
