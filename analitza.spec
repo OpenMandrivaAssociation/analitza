@@ -75,7 +75,7 @@ Summary:	Runtime library for %{name}
 Group:		System/Libraries
 Obsoletes:	%{mklibname analitzagui 6} < 15012.0
 
-%description -n %{libanalitzagui}
+%description -n %{libanalitzaGui}
 The analitza library will let you add mathematical features to your program.
 This pakage provide the runtime library for %{name}.
 
