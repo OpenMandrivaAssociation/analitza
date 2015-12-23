@@ -48,70 +48,74 @@ This package provides plots used by the libanalitzaplot library.
 
 #---------------------------------------------
 
-%define analitza_major 6
-%define libanalitza %mklibname analitza %{analitza_major}
+%define Analitza_major 7
+%define libAnalitza %mklibname Analitza %{Analitza_major}
 
-%package -n %{libanalitza}
+%package -n %{libAnalitza}
 Summary:	Runtime library for %{name}
 Group:		System/Libraries
 # calgebra used to be part of KDE4 analitza, but is gone now
 Obsoletes:	calgebra < %{EVRD}
+Obsoletes:	%{mklibname analitza 6} < 15012.0
 
-%description -n %{libanalitza}
+%description -n %{libAnalitza}
 The analitza library will let you add mathematical features to your program.
 This pakage provide the runtime library for %{name}.
 
-%files -n %{libanalitza}
-%{_libdir}/libAnalitza.so.%{analitzagui_major}*
+%files -n %{libAnalitza}
+%{_libdir}/libAnalitza.so.%{Analitzagui_major}*
 
 #---------------------------------------------
 
-%define analitzagui_major 6
-%define libanalitzagui %mklibname analitzagui %{analitzagui_major}
+%define AnalitzaGui_major 7
+%define libAnalitzaGui %mklibname AnalitzaGui %{AnalitzaGui_major}
 
-%package -n %{libanalitzagui}
+%package -n %{libAnalitzaGui}
 Summary:	Runtime library for %{name}
 Group:		System/Libraries
+Obsoletes:	%{mklibname analitzagui 6} < 15012.0
 
 %description -n %{libanalitzagui}
 The analitza library will let you add mathematical features to your program.
 This pakage provide the runtime library for %{name}.
 
-%files -n %{libanalitzagui}
-%{_libdir}/libAnalitzaGui.so.%{analitzagui_major}*
+%files -n %{libAnalitzaGui}
+%{_libdir}/libAnalitzaGui.so.%{AnalitzaGui_major}*
 
 #---------------------------------------------
 
-%define analitzaplot_major 6
-%define libanalitzaplot %mklibname analitzaplot %{analitzaplot_major}
+%define AnalitzaPlot_major 7
+%define libAnalitzaPlot %mklibname AnalitzaPlot %{AnalitzaPlot_major}
 
-%package -n %{libanalitzaplot}
+%package -n %{libAnalitzaPlot}
 Summary:	Runtime library for %{name}
 Group:		System/Libraries
 Requires:	analitza-plots
+Obsoletes:	%{mklibname analitzaplot 6} < 15012.0
 
-%description -n %{libanalitzaplot}
+%description -n %{libAnalitzaPlot}
 The analitza library will let you add mathematical features to your program.
 This pakage provide the runtime library for %{name}.
 
-%files -n %{libanalitzaplot}
-%{_libdir}/libAnalitzaPlot.so.%{analitzaplot_major}*
+%files -n %{libAnalitzaPlot}
+%{_libdir}/libAnalitzaPlot.so.%{AnalitzaPlot_major}*
 
 #---------------------------------------------
 
-%define analitzawidgets_major 6
-%define libanalitzawidgets %mklibname analitzawidgets %{analitzawidgets_major}
+%define AnalitzaWidgets_major 7
+%define libAnalitzaWidgets %mklibname AnalitzaWidgets %{AnalitzaWidgets_major}
 
-%package -n %{libanalitzawidgets}
+%package -n %{libAnalitzaWidgets}
 Summary:	Widget library for %{name}
 Group:		System/Libraries
+Obsoletes:	%{mklibname analitzawidgets 6} < 15012.0
 
-%description -n %{libanalitzawidgets}
+%description -n %{libAnalitzaWidgets}
 The analitza library will let you add mathematical features to your program.
 This pakage provide the Widgets library for %{name}.
 
-%files -n %{libanalitzawidgets}
-%{_libdir}/libAnalitzaWidgets.so.%{analitzawidgets_major}*
+%files -n %{libAnalitzaWidgets}
+%{_libdir}/libAnalitzaWidgets.so.%{AnalitzaWidgets_major}*
 
 #---------------------------------------------
 %package -n %{_lib}analitza-qml
@@ -129,11 +133,10 @@ QML support for Analitza
 %package devel
 Summary:	Devel stuff for %{name}
 Group:		Development/KDE and Qt
-Requires:	kdelibs4-devel
-Requires:	%{libanalitza} = %{EVRD}
-Requires:	%{libanalitzagui} = %{EVRD}
-Requires:	%{libanalitzaplot} = %{EVRD}
-Requires:	%{libanalitzawidgets} = %{EVRD}
+Requires:	%{libAnalitza} = %{EVRD}
+Requires:	%{libAnalitzaGui} = %{EVRD}
+Requires:	%{libAnalitzaPlot} = %{EVRD}
+Requires:	%{libAnalitzaWidgets} = %{EVRD}
 
 %description devel
 Files needed to build applications based on %{name}.
