@@ -63,7 +63,7 @@ The analitza library will let you add mathematical features to your program.
 This pakage provide the runtime library for %{name}.
 
 %files -n %{libAnalitza}
-%{_libdir}/libAnalitza.so.%{Analitzagui_major}*
+%{_libdir}/libAnalitza.so.%{Analitza_major}*
 
 #---------------------------------------------
 
