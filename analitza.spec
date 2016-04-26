@@ -8,12 +8,12 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	15.12.3
+Version:	16.04.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
-Source0:	ftp://ftp.kde.org/pub/kde/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
 # add SHOULD_BUILD_OPENGL option, to be able to disable support
 # on arm because plotter3d assumes qreal=double all over the place
 Patch0:		analitza-14.12.0-opengl_optional.patch
