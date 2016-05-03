@@ -14,9 +14,6 @@ License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
-# add SHOULD_BUILD_OPENGL option, to be able to disable support
-# on arm because plotter3d assumes qreal=double all over the place
-Patch0:		analitza-14.12.0-opengl_optional.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
@@ -153,7 +150,7 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
-%patch0 -p1 .opengl_arm_float
+%apply_patches
 
 %cmake_kde5 \
 %if %{with opengl}
