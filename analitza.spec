@@ -8,7 +8,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	16.12.2
+Version:	17.03.80
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -45,7 +45,7 @@ This package provides plots used by the libanalitzaplot library.
 
 #---------------------------------------------
 
-%define Analitza_major 7
+%define Analitza_major 8
 %define libAnalitza %mklibname Analitza %{Analitza_major}
 
 %package -n %{libAnalitza}
@@ -64,7 +64,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define AnalitzaGui_major 7
+%define AnalitzaGui_major %{Analitza_major}
 %define libAnalitzaGui %mklibname AnalitzaGui %{AnalitzaGui_major}
 
 %package -n %{libAnalitzaGui}
@@ -81,7 +81,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define AnalitzaPlot_major 7
+%define AnalitzaPlot_major %{Analitza_major}
 %define libAnalitzaPlot %mklibname AnalitzaPlot %{AnalitzaPlot_major}
 
 %package -n %{libAnalitzaPlot}
@@ -99,7 +99,7 @@ This pakage provide the runtime library for %{name}.
 
 #---------------------------------------------
 
-%define AnalitzaWidgets_major 7
+%define AnalitzaWidgets_major %{Analitza_major}
 %define libAnalitzaWidgets %mklibname AnalitzaWidgets %{AnalitzaWidgets_major}
 
 %package -n %{libAnalitzaWidgets}
