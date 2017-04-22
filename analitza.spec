@@ -8,7 +8,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	17.03.80
+Version:	17.04.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -59,7 +59,7 @@ Obsoletes:	%{mklibname analitza 6} < 15012.0
 The analitza library will let you add mathematical features to your program.
 This pakage provide the runtime library for %{name}.
 
-%files -n %{libAnalitza}
+%files -n %{libAnalitza} -f qm.lang
 %{_libdir}/libAnalitza.so.%{Analitza_major}*
 
 #---------------------------------------------
@@ -164,3 +164,8 @@ Files needed to build applications based on %{name}.
 
 %install
 %ninja_install -C build
+TOP=`pwd`
+cd %{buildroot}
+find .%{_datadir}/locale -name "*.qm" |while read r; do
+	echo "%%lang($(echo $r|cut -d/ -f5)) $(echo $r |cut -b2-)" >>$TOP/qm.lang
+done
