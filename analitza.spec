@@ -8,12 +8,13 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	17.04.2
+Version:	17.04.3
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
 Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Patch0:		analitza-17.04.3-clang-5.0.patch
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
