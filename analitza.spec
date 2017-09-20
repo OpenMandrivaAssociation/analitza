@@ -27,6 +27,7 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(eigen3)
+BuildRequires:	cmake(Qt5PrintSupport)
 
 %description
 The analitza library will let you add mathematical features to your program.
