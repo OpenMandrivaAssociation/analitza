@@ -1,2 +1,4 @@
-sources:
+removed_sources:
   analitza-17.12.1.tar.xz: c0f7c4997d4af488d7bea95b0e5c454f87005c4f
+sources:
+  analitza-17.12.2.tar.xz: 928605d4f38ac65d20e769e7ae38a2a993aa1779
