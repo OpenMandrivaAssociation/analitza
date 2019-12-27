@@ -8,12 +8,12 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	19.11.90
+Version:	19.12.0
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
-Source0:	http://download.kde.org/%{stable}/applications/%{version}/src/%{name}-%{version}.tar.xz
+Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/%{name}-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
 BuildRequires:	pkgconfig(Qt5Widgets)
 BuildRequires:	pkgconfig(Qt5Xml)
@@ -151,7 +151,7 @@ Files needed to build applications based on %{name}.
 
 %prep
 %setup -q
-%apply_patches
+%autopatch -p1
 
 %cmake_kde5 \
 %if %{with opengl}
