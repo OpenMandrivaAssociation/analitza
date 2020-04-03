@@ -8,7 +8,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	20.03.80
+Version:	20.03.90
 Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
