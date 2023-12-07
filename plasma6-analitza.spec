@@ -15,18 +15,19 @@ Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/analitza-%{version}.tar.xz
 BuildRequires:	cmake(ECM)
-BuildRequires:	pkgconfig(Qt6Widgets)
-BuildRequires:	pkgconfig(Qt6Xml)
-BuildRequires:	pkgconfig(Qt6Svg)
-BuildRequires:	pkgconfig(Qt6OpenGL)
-BuildRequires:	pkgconfig(Qt6Test)
-BuildRequires:	pkgconfig(Qt6Qml)
-BuildRequires:	pkgconfig(Qt6Quick)
+BuildRequires:	cmake(Qt6)
+BuildRequires:	cmake(Qt6Widgets)
+BuildRequires:	cmake(Qt6Xml)
+BuildRequires:	cmake(Qt6Svg)
+BuildRequires:	cmake(Qt6OpenGL)
+BuildRequires:	cmake(Qt6Test)
+BuildRequires:	cmake(Qt6Qml)
+BuildRequires:	cmake(Qt6Quick)
+BuildRequires:	cmake(Qt6PrintSupport)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(eigen3)
-BuildRequires:	cmake(Qt6PrintSupport)
 
 %description
 The analitza library will let you add mathematical features to your program.
