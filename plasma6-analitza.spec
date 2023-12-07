@@ -28,6 +28,7 @@ BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	cmake(Qt6DBus)
 BuildRequires:	cmake(Qt6Core5Compat)
 BuildRequires:	cmake(Qt6OpenGLWidgets)
+BuildRequires:	cmake(Qt6LinguistTools)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
