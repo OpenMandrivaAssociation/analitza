@@ -24,6 +24,7 @@ BuildRequires:	cmake(Qt6Test)
 BuildRequires:	cmake(Qt6Qml)
 BuildRequires:	cmake(Qt6Quick)
 BuildRequires:	cmake(Qt6PrintSupport)
+BuildRequires:	cmake(Qt6Gui)
 BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
