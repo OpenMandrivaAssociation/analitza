@@ -9,7 +9,7 @@
 Summary:	Library that will let you add mathematical features to your program
 Name:		plasma6-analitza
 Version:	24.01.80
-Release:	1
+Release:	2
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
@@ -53,14 +53,11 @@ This package provides plots used by the libanalitzaplot library.
 #---------------------------------------------
 
 %define Analitza_major 8
-%define libAnalitza %mklibname Analitza %{Analitza_major}
+%define libAnalitza %mklibname Analitza
 
 %package -n %{libAnalitza}
 Summary:	Runtime library for %{name}
 Group:		System/Libraries
-# calgebra used to be part of KDE4 analitza, but is gone now
-Obsoletes:	calgebra < %{EVRD}
-Obsoletes:	%{mklibname analitza 6} < 16012.0
 
 %description -n %{libAnalitza}
 The analitza library will let you add mathematical features to your program.
@@ -72,12 +69,11 @@ This pakage provide the runtime library for %{name}.
 #---------------------------------------------
 
 %define AnalitzaGui_major %{Analitza_major}
-%define libAnalitzaGui %mklibname AnalitzaGui %{AnalitzaGui_major}
+%define libAnalitzaGui %mklibname AnalitzaGui
 
 %package -n %{libAnalitzaGui}
 Summary:	Runtime library for %{name}
 Group:		System/Libraries
-Obsoletes:	%{mklibname analitzagui 6} < 16012.0
 
 %description -n %{libAnalitzaGui}
 The analitza library will let you add mathematical features to your program.
@@ -89,13 +85,12 @@ This pakage provide the runtime library for %{name}.
 #---------------------------------------------
 
 %define AnalitzaPlot_major %{Analitza_major}
-%define libAnalitzaPlot %mklibname AnalitzaPlot %{AnalitzaPlot_major}
+%define libAnalitzaPlot %mklibname AnalitzaPlot
 
 %package -n %{libAnalitzaPlot}
 Summary:	Runtime library for %{name}
 Group:		System/Libraries
 Requires:	analitza-plots
-Obsoletes:	%{mklibname analitzaplot 6} < 16012.0
 
 %description -n %{libAnalitzaPlot}
 The analitza library will let you add mathematical features to your program.
@@ -107,12 +102,11 @@ This pakage provide the runtime library for %{name}.
 #---------------------------------------------
 
 %define AnalitzaWidgets_major %{Analitza_major}
-%define libAnalitzaWidgets %mklibname AnalitzaWidgets %{AnalitzaWidgets_major}
+%define libAnalitzaWidgets %mklibname AnalitzaWidgets
 
 %package -n %{libAnalitzaWidgets}
 Summary:	Widget library for %{name}
 Group:		System/Libraries
-Obsoletes:	%{mklibname analitzawidgets 6} < 16012.0
 
 %description -n %{libAnalitzaWidgets}
 The analitza library will let you add mathematical features to your program.
@@ -122,11 +116,11 @@ This pakage provide the Widgets library for %{name}.
 %{_libdir}/libAnalitzaWidgets.so.%{AnalitzaWidgets_major}*
 
 #---------------------------------------------
-%package -n %{_lib}analitza-qml
+%package -n %{_lib}analitza-qml6
 Summary:	QML support for Analitza
 Group:		System/Libraries
 
-%description -n %{_lib}analitza-qml
+%description -n %{_lib}analitza-qml6
 QML support for Analitza
 
 %files -n %{_lib}analitza-qml
