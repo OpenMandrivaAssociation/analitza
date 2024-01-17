@@ -8,8 +8,8 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		plasma6-analitza
-Version:	24.01.80
-Release:	2
+Version:	24.01.90
+Release:	1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
@@ -123,7 +123,7 @@ Group:		System/Libraries
 %description -n %{_lib}analitza-qml6
 QML support for Analitza
 
-%files -n %{_lib}analitza-qml
+%files -n %{_lib}analitza-qml6
 %{_libdir}/qt6/qml/org/kde/analitza
 
 #---------------------------------------------
