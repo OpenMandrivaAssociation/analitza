@@ -1,3 +1,6 @@
+%define git 20240217
+%define gitbranch release/24.02
+%define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %ifarch %{arm}
 %bcond_with opengl
 %else
@@ -8,12 +11,16 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		plasma6-analitza
-Version:	24.01.95
-Release:	1
+Version:	24.01.96
+Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
+%if 0%{?git:1}
+Source0:	https://invent.kde.org/education/analitza/-/archive/%{gitbranch}/analitza-%{gitbranchd}.tar.bz2#/analitza-%{git}.tar.bz2
+%else
 Source0:	http://download.kde.org/%{stable}/release-service/%{version}/src/analitza-%{version}.tar.xz
+%endif
 BuildRequires:	cmake(ECM)
 BuildRequires:	cmake(Qt6)
 BuildRequires:	cmake(Qt6Widgets)
@@ -150,7 +157,7 @@ Files needed to build applications based on %{name}.
 #----------------------------------------------------------------------
 
 %prep
-%autosetup -p1 -n analitza-%{version}
+%autosetup -p1 -n analitza-%{?git:%{gitbranchd}}%{!?git:%{version}}
 
 %cmake \
 	-DKDE_INSTALL_USE_QT_SYS_PATHS:BOOL=ON \
