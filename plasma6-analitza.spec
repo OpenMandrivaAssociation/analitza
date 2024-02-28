@@ -1,4 +1,4 @@
-%define git 20240217
+#define git 20240217
 %define gitbranch release/24.02
 %define gitbranchd %(echo %{gitbranch} |sed -e "s,/,-,g")
 %ifarch %{arm}
@@ -11,7 +11,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		plasma6-analitza
-Version:	24.01.96
+Version:	24.02.0
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
