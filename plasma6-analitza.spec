@@ -12,7 +12,7 @@
 Summary:	Library that will let you add mathematical features to your program
 Name:		plasma6-analitza
 Version:	24.02.0
-Release:	%{?git:0.%{git}.}1
+Release:	%{?git:0.%{git}.}2
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
 Url:		http://edu.kde.org
