@@ -11,7 +11,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		plasma6-analitza
-Version:	24.02.2
+Version:	24.05.0
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -59,7 +59,7 @@ This package provides plots used by the libanalitzaplot library.
 
 #---------------------------------------------
 
-%define Analitza_major 8
+%define Analitza_major 9
 %define libAnalitza %mklibname Analitza
 
 %package -n %{libAnalitza}
