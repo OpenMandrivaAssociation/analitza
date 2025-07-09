@@ -10,7 +10,7 @@
 %define stable %([ "`echo %{version} |cut -d. -f3`" -ge 80 ] && echo -n un; echo -n stable)
 
 Summary:	Library that will let you add mathematical features to your program
-Name:		plasma6-analitza
+Name:		analitza
 Version:	25.04.0
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
