@@ -11,7 +11,7 @@
 
 Summary:	Library that will let you add mathematical features to your program
 Name:		analitza
-Version:	25.04.0
+Version:	25.04.3
 Release:	%{?git:0.%{git}.}1
 License:	LGPLv2+
 Group:		Graphical desktop/KDE
@@ -40,6 +40,8 @@ BuildRequires:	readline-devel
 BuildRequires:	pkgconfig(gl)
 BuildRequires:	pkgconfig(glu)
 BuildRequires:	pkgconfig(eigen3)
+
+%rename plasma6-analitza
 
 %description
 The analitza library will let you add mathematical features to your program.
