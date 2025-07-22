@@ -144,6 +144,7 @@ Requires:	%{libAnalitza} = %{EVRD}
 Requires:	%{libAnalitzaGui} = %{EVRD}
 Requires:	%{libAnalitzaPlot} = %{EVRD}
 Requires:	%{libAnalitzaWidgets} = %{EVRD}
+%rename plasma6-analitza-devel
 
 %description devel
 Files needed to build applications based on %{name}.
