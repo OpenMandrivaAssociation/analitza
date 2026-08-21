@@ -52,6 +52,7 @@ The analitza library will let you add mathematical features to your program.
 Summary:	Plots used by the libanalitzaplot library
 Group:		Graphical desktop/KDE
 BuildArch:	noarch
+%rename plasma6-analitza-plots
 
 %description plots
 This package provides plots used by the libanalitzaplot library.
